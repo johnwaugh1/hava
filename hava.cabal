@@ -7,11 +7,11 @@ cabal-version: 2.2
 name:           hava
 version:        0.1.0.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/hava#readme>
-homepage:       https://github.com/githubuser/hava#readme
-bug-reports:    https://github.com/githubuser/hava/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2024 Author name here
+homepage:       https://github.com/johnwaugh1/hava#readme
+bug-reports:    https://github.com/johnwaugh1/hava/issues
+author:         John Waugh
+maintainer:     johnmwaugh21@gmail.com
+copyright:      2024 John Waugh
 license:        BSD-3-Clause
 license-file:   LICENSE
 build-type:     Simple
@@ -21,11 +21,11 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/hava
+  location: https://github.com/johnwaugh1/hava
 
 library
   exposed-modules:
-      Lib
+      Lexer
   other-modules:
       Paths_hava
   autogen-modules:
@@ -34,7 +34,8 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      HUnit
+    , base >=4.7 && <5
   default-language: Haskell2010
 
 executable hava-exe
@@ -47,7 +48,8 @@ executable hava-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      HUnit
+    , base >=4.7 && <5
     , hava
   default-language: Haskell2010
 
@@ -55,6 +57,7 @@ test-suite hava-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      LexerTests
       Paths_hava
   autogen-modules:
       Paths_hava
@@ -62,6 +65,7 @@ test-suite hava-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      HUnit
+    , base >=4.7 && <5
     , hava
   default-language: Haskell2010

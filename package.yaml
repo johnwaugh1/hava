@@ -1,10 +1,10 @@
 name:                hava
 version:             0.1.0.0
-github:              "githubuser/hava"
+github:              "johnwaugh1/hava"
 license:             BSD-3-Clause
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2024 Author name here"
+author:              "John Waugh"
+maintainer:          "johnmwaugh21@gmail.com"
+copyright:           "2024 John Waugh"
 
 extra-source-files:
 - README.md
@@ -21,6 +21,7 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- HUnit
 
 ghc-options:
 - -Wall
