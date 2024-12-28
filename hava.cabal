@@ -55,9 +55,8 @@ executable hava-exe
 
 test-suite hava-test
   type: exitcode-stdio-1.0
-  main-is: Spec.hs
+  main-is: LexerTests.hs
   other-modules:
-      LexerTests
       Paths_hava
   autogen-modules:
       Paths_hava

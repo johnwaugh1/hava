@@ -50,7 +50,7 @@ executables:
 
 tests:
   hava-test:
-    main:                Spec.hs
+    main:                LexerTests.hs
     source-dirs:         test
     ghc-options:
     - -threaded
