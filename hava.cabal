@@ -26,8 +26,9 @@ source-repository head
 library
   exposed-modules:
       Lexer
-      Parser
+      AST
   other-modules:
+      Parser
       Paths_hava
   autogen-modules:
       Paths_hava
@@ -58,6 +59,8 @@ test-suite hava-test
   type: exitcode-stdio-1.0
   main-is: LexerTests.hs
   other-modules:
+      LexerTest1
+      LexerTest2
       ParserTests
       Paths_hava
   autogen-modules:

@@ -1,28 +1,11 @@
 module Lexer where
 
+import AST
 import Data.Char
 import Data.List
 
--- Token Definitions
-data Token = Keyword String
-           | Identifier String
-           | IntegerLiteral Integer
-           | FloatingPointLiteral Double
-           | StringLiteral String
-           | BoolLiteral Bool
-           | Operator String
-           | Symbol Char
-           | LPar | RPar | LBrace | RBrace | LBracket | RBracket
-           | SemiColon | Comma | Colon | QuestionMark | Dot 
-           | Equals | Plus | Minus | Star | Slash | Modulo
-           | And | Or | Not | GreaterThan | LessThan 
-           | GreaterThanEqual | LessThanEqual | EqualEqual | NotEqual
-           | SingleLineComment String | MultiLineComment String
-           | Err String
-    deriving (Eq, Show)
-
 javaKeywords :: [String]
-javaKeywords = 
+javaKeywords =
     [ "abstract", "continue", "for", "new", "switch"
     , "assert", "default", "goto", "package", "synchronized"
     , "boolean", "do", "if", "private", "this"
@@ -33,6 +16,7 @@ javaKeywords =
     , "char", "final", "interface", "static", "void"
     , "class", "finally", "long", "strictfp", "volatile"
     , "const", "float", "native", "super", "while"
+    , "System", "out", "println", "String"
     ]
 
 -- Lexer Implementation

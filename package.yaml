@@ -36,6 +36,10 @@ ghc-options:
 
 library:
   source-dirs: src
+  exposed-modules:
+    - Lexer
+    - AST
+
 
 executables:
   hava-exe:

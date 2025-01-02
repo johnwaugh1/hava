@@ -8,5 +8,9 @@ parseIfElse (Keyword "if" : LPar : PT condition : RPar : LBrace : body : RBrace 
     sr (If condition body elseBody : s) q
 
 parseWhileLoop :: [Token] -> [Token] -> [Token]
+parseWhileLoop (Keyword "for" : LPar : PT Condition : RPar : LBrace : body : RBrace : s) q =
+    sr (For condition body : s) q
+
+parseWhileLoop :: [Token] -> [Token] -> [Token]
 parseWhileLoop (Keyword "while" : LPar : PT Condition : RPar : LBrace : body : RBrace : s) q =
     sr (While condition body : s) q
